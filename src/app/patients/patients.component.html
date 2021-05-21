@@ -1,0 +1,71 @@
+<!-- /.row -->
+<div class="row pt-4">
+  <div class="">
+    <pagination-controls class="text-right" (pageChange)="page = $event"></pagination-controls>
+  </div>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Patients</h3>
+
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 165px;">
+            <!-- <div class="input-group-append"> -->
+              <button type="button" class="btn btn-success">Add a patient</button>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let patient of patientsList | paginate: { itemsPerPage: 10, currentPage: page }">
+              <td> {{ patient.id }}</td>
+              <td> {{ patient.firstName + ' ' + patient.lastName }}</td>
+              <td> {{ patient.streetAddress + ', ' + patient.city }}</td>
+              <td> {{ patient.phone }}</td>
+              <td> {{ patient.email }}</td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-warning">Action</button>
+                  <button type="button" class="btn btn-warning dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-pencil-alt px-3"></i>
+                      Edit
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-eraser px-3"></i>
+                      Delete
+                    </a>
+
+                    <!-- <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a> -->
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+</div>
+<!-- /.row -->
+
+
