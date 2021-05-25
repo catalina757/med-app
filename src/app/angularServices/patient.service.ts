@@ -6,24 +6,22 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PatientService {
+  private baseUrl = 'http://localhost:3000/patients';
 
   constructor(private httpPatients: HttpClient) { }
 
-  public getPatients(): Observable<Patient[]> {
-    return this.httpPatients.get<Patient[]>('http://localhost:3000/patients');
+  public getPatientsServ(): Observable<Patient[]> {
+    return this.httpPatients.get<Patient[]>(`${this.baseUrl}`);
   }
 
-  public addPatient(id: number, firstName: string, lastName: string, streetAddress: string, city: string, phone: string, email: string): Observable<Patient[]> {
-    return this.httpPatients.post<Patient[]>('http://localhost:3000/patients', {
-      id,
-      firstName,
-      lastName,
-      streetAddress,
-      city,
-      phone,
-      email
-    })
+  public addPatientServ(patient: Patient): Observable<Patient> {
+    return this.httpPatients.post<Patient>(`${this.baseUrl}`, patient);
   }
+
+  public deletePatientServ(id: number): Observable<void> {
+    return this.httpPatients.delete<void>(`${this.baseUrl}/${id}`);
+  }
+
 }
 
 export interface Patient {

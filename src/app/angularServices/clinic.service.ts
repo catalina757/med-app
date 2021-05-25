@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClinicService {
+  private baseUrl = 'http://localhost:3000/clinics';
 
   constructor(private httpClinics: HttpClient) { }
 
   public getClinics(): Observable<Clinic[]> {
-    return this.httpClinics.get<Clinic[]>('http://localhost:3000/clinics');
+    return this.httpClinics.get<Clinic[]>(`${this.baseUrl}`);
   }
 
 }
