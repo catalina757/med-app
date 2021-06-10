@@ -1,0 +1,52 @@
+<!--<form #addPatientModal="ngForm">-->
+<!--    <div class="modal fade" id="modal-lg">-->
+<!--        <div class="modal-dialog modal-lg">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h4 class="modal-title">Add Patient</h4>-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                        <span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <label for="firstName">First Name: </label>-->
+<!--                    <input-->
+<!--                            type="text"-->
+<!--                            class="form-control"-->
+<!--                            name="firstName"-->
+<!--                            id="firstName"-->
+<!--                            ngModel-->
+<!--                            #firstName="ngModel"-->
+<!--                            required>-->
+<!--                </div>-->
+<!--                <p *ngIf="!firstName.valid && firstName.touched">Please enter a valid value!</p>-->
+<!--                <div class="modal-body">-->
+<!--                    <label for="lastName">Last Name: </label>-->
+<!--                    <input-->
+<!--                            type="text"-->
+<!--                            class="form-control"-->
+<!--                            name="lastName"-->
+<!--                            id="lastName"-->
+<!--                            ngModel>-->
+<!--                </div>-->
+<!--                <div class="modal-footer justify-content-between">-->
+<!--                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+<!--                    <button type="button" class="btn btn-primary" [disabled]="!addPatientModal.valid" (click)="createPatient(addPatientModal)" data-dismiss="modal">Save changes</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /.modal-content &ndash;&gt;-->
+<!--        </div>-->
+<!--        &lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--    </div>-->
+<!--    &lt;!&ndash; /.modal &ndash;&gt;-->
+<!--</form>-->
+
+
+
+<!--<h1>This is the child component !</h1>-->
+<!--<h2>It wants to say "Hey " to its parent.</h2>-->
+<!--It also wants to receive a response from its child.-->
+<!--<p>-->
+<!--&lt;!&ndash;    <b>Response from parent : "{{ receivedParentMessage }}"</b>&ndash;&gt;-->
+<!--</p>-->
+<!--<button (click)="sendMessageToParent(messageToSendC)">Send to Parent</button>-->

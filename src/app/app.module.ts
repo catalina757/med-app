@@ -13,7 +13,8 @@ import { PatientsComponent } from './patients/patients.component';
 import { FooterComponent } from './footer/footer.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { ContactComponent } from './contact/contact.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AddPatientModalComponent } from './add-patient-modal/add-patient-modal.component';
 
 
 
@@ -28,13 +29,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     TopNavComponent,
     ContactComponent,
+    AddPatientModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

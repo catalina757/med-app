@@ -5,12 +5,14 @@ import { ContactComponent } from './contact/contact.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PatientsComponent } from './patients/patients.component';
+import { AddPatientModalComponent } from './add-patient-modal/add-patient-modal.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'clinics', component: ClinicsComponent},
   {path: 'patients', component: PatientsComponent},
+  {path: 'addPatientModal', component: AddPatientModalComponent},
   {path: 'contact', component: ContactComponent},
   {path: '404', component: NotFoundComponent},
   {path: '**', redirectTo: '/404'}

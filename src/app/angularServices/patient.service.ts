@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,22 +14,27 @@ export class PatientService {
     return this.httpPatients.get<Patient[]>(`${this.baseUrl}`);
   }
 
-  public addPatientServ(patient: Patient): Observable<Patient> {
+  public createPatientServ(patient: Patient): Observable<Patient> {
     return this.httpPatients.post<Patient>(`${this.baseUrl}`, patient);
   }
 
-  public deletePatientServ(id: number): Observable<void> {
-    return this.httpPatients.delete<void>(`${this.baseUrl}/${id}`);
+  public updatePatientServ(patient:Patient): Observable<Patient> {
+    return  this.httpPatients.put<Patient>(`${this.baseUrl}/${patient.id}`, patient);
+  }
+
+  public deletePatientServ(patient: Patient): Observable<Patient> {
+    return this.httpPatients.delete<Patient>(`${this.baseUrl}/${patient.id}`);
   }
 
 }
 
 export interface Patient {
-  id: number;
+  id?: number;
   firstName: string;
   lastName: string;
-  streetAddress: string;
-  city: string;
-  phone: string;
-  email: string;
+  // streetAddress: string;
+  // city: string;
+  // phone: string;
+  // email: string;
+
 }
