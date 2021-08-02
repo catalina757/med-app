@@ -14,7 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { ContactComponent } from './contact/contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { AddPatientModalComponent } from './add-patient-modal/add-patient-modal.component';
+import { PatientModalComponent } from './patient-modal/patient-modal.component';
 
 
 
@@ -29,7 +29,7 @@ import { AddPatientModalComponent } from './add-patient-modal/add-patient-modal.
     FooterComponent,
     TopNavComponent,
     ContactComponent,
-    AddPatientModalComponent,
+    PatientModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ import { AddPatientModalComponent } from './add-patient-modal/add-patient-modal.
     HttpClientModule,
     NgxPaginationModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

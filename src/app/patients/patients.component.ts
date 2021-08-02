@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {Patient, PatientService} from '../angularServices/patient.service';
 import { NgForm } from '@angular/forms';
 
+declare let $: any;
+
+
 @Component({
     selector: 'app-patients',
     templateUrl: './patients.component.html',
@@ -26,15 +29,19 @@ export class PatientsComponent implements OnInit {
         })
     }
 
-    // receivedChildMessage: string = '';
-    // getMessage(message: string) {
-    //     this.receivedChildMessage = message;
-    // }
+    receivedChildMessage: string = '';
+    getMessage(message: string) {
+        this.receivedChildMessage = message;
+    }
 
     // patient: Patient[] = [];
     // getMessage(patient: Patient) {
     //     this.patient = patient;
     // }
+
+    openPatientModal() {
+        $('#modal-patient-dialog').modal('show');
+    }
 
     createPatient(addPatientModal: NgForm) {
         this.patientService.createPatientServ(addPatientModal.value).subscribe((newPatient: Patient) => {

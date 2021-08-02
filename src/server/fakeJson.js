@@ -5,7 +5,7 @@ var database = {
   patients: []
 };
 
-for (var i = 1; i<= 15; i++) {
+for (var i = 1; i<= 2; i++) {
   database.clinics.push({
     id: i,
     name: faker.company.companyName(),
@@ -22,7 +22,7 @@ for (var i = 1; i<= 15; i++) {
   });
 }
 
-for (var i = 1; i<= 15; i++) {
+for (var i = 1; i<= 2; i++) {
   database.patients.push({
     id: i,
     firstName: faker.name.firstName(),
