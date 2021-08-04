@@ -15,6 +15,7 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { ContactComponent } from './contact/contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PatientModalComponent } from './patient-modal/patient-modal.component';
+import { CalorieCalculatorComponent } from './calorie-calculator/calorie-calculator.component';
 
 
 
@@ -30,6 +31,7 @@ import { PatientModalComponent } from './patient-modal/patient-modal.component';
     TopNavComponent,
     ContactComponent,
     PatientModalComponent,
+    CalorieCalculatorComponent,
   ],
   imports: [
     BrowserModule,

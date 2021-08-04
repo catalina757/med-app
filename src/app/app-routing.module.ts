@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PatientsComponent } from './patients/patients.component';
 import {PatientModalComponent} from './patient-modal/patient-modal.component';
+import {CalorieCalculatorComponent} from './calorie-calculator/calorie-calculator.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'patients', component: PatientsComponent},
   {path: 'patient-modal', component: PatientModalComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'calorie', component: CalorieCalculatorComponent},
   {path: '404', component: NotFoundComponent},
   {path: '**', redirectTo: '/404'}
 ];
